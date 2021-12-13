@@ -13,4 +13,4 @@ jobs:
     steps:
       - users: actions/checkout@v2
       - name: test workflow
-          run: echo "YAY this workflow is running" 
+        run: echo "YAY this workflow is running" 
