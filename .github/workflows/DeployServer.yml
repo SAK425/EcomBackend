@@ -3,10 +3,10 @@ name: Deploy Server
 on:
   push:
     branches:
-       -master
+      - master
     paths:
-       -'src/*'
-       -'.github/workflows/DeployServer.yml'
+      - 'src/*'
+      - '.github/workflows/DeployServer.yml'
 jobs:
   deploy:
     runs-on: ubuntu-latest
