@@ -5,23 +5,23 @@ on:
     branches:
       - master
     paths:
-      - 'src/*'
-      - '.github/workflows/DeployServer.yml'
+      - "src/*"
+      - ".github/workflows/DeployServer.yml"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: test workflow
-        run: echo "YAY this workflow is running" 
+        run: echo "YAY this workflow is running"
       - name: Add github username
-        run: git config --global user.name 'SAK425'
+        run: git config --global user.name 'kartik18G'
       - name: Add github email
-        run: git config --global user.email 'sakshidarshane2017@gmail.com'
-      - name: add heroku remote 
-        run: git remote add heroku https://7cfcb9a3-0724-440e-b360-2951007af37bgit.heroku.com/ecomsak.git
-      - name: fetch repo
+        run: git config --global user.email 'gupta.kartik18kg@gmail.com'
+      - name: add heroku remote
+        run: git remote add heroku https://heroku:${{7cfcb9a3-0724-440e-b360-2951007af37b}}@git.heroku.com/${{ecomsak}}.git
+      - name: Fetch repo
         run: git fetch --unshallow
       - name: push to heroku remote
-        run: git push heroku master --false
-
+        run: git push heroku master --force
