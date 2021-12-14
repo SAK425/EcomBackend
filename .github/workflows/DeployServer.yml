@@ -20,6 +20,8 @@ jobs:
         run: git config --global user.email 'sakshidarshane2017@gmail.com'
       - name: add heroku remote 
         run: git remote add heroku https://7cfcb9a3-0724-440e-b360-2951007af37bgit.heroku.com/ecomsak.git
+      - name: fetch repo
+        run: git fetch --unshallow
       - name: push to heroku remote
-        run: git push heroku master
+        run: git push heroku master --false
 
